@@ -1,5 +1,5 @@
 import express from 'express';
-import { getMytrips, createTrip, deleteTrip } from '../controllers/mytrips.js';
+import { getMytrips, createTrip, updateTrip, deleteTrip } from '../controllers/mytrips.js';
 
 const router = express.Router();
 
