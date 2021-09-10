@@ -6,7 +6,7 @@ import mytripsRoutes from './routes/mytrips.js';
 
 // App Config
 const app = express();
-const port = 9000;
+const port =  process.env.port || 9000;
 
 // Middlewares
 app.use(Cors());
