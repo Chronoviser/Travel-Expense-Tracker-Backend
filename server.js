@@ -6,7 +6,7 @@ import mytripsRoutes from './routes/mytrips.js';
 
 // App Config
 const app = express();
-const port =  process.env.port || 9000;
+const port = process.env.PORT || 9000;
 
 // Middlewares
 app.use(Cors());
@@ -21,6 +21,7 @@ mongoose.connect(CONNECTION_URL, err => {
 })
 
 // API Endpoints
+app.get('/', (req, res) => res.status(200).send('Travel Expense Tracker Backend Working!'));
 app.use('/mytrips', mytripsRoutes);
 
 // Listener
